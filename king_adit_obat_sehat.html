@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173d2b">
+  <meta name="description" content="King Adit Obat Sehat — mengenal tanaman herbal, manfaat tradisional, dan cara merawatnya.">
+  <title>King Adit Obat Sehat | Dunia Tanaman Herbal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #173d2b; --forest-2: #24563b; --leaf: #8bbf65;
+      --cream: #f7f6ef; --paper: #fffef9; --ink: #1c2d22;
+      --muted: #68766a; --line: #e4e8dc; --gold: #e6b95e;
+      --shadow: 0 18px 55px rgba(23,61,43,.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "DM Sans", sans-serif; color: var(--ink); background: var(--cream); }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    img { display: block; width: 100%; object-fit: cover; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .topline { background: #102d20; color: #e8f0e5; font-size: 12px; text-align: center; padding: 9px 16px; letter-spacing: .4px; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(247,246,239,.93); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(228,232,220,.8); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; color: var(--forest); line-height: 1.05; }
+    .brand-mark { width: 42px; height: 42px; border-radius: 14px 14px 14px 4px; display: grid; place-items: center; background: var(--forest); color: #d6efb5; font-size: 23px; }
+    .brand small { display: block; color: var(--muted); font-size: 10px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; margin-top: 5px; }
+    .navlinks { display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 600; color: #43564a; }
+    .navlinks a:hover { color: #7ca957; }
+    .nav-cta, .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 0; border-radius: 999px; background: var(--forest); color: white; padding: 13px 20px; font-weight: 700; font-size: 13px; cursor: pointer; transition: transform .2s, background .2s; }
+    .nav-cta:hover, .btn:hover { background: var(--forest-2); transform: translateY(-2px); }
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--forest); font-size: 25px; cursor: pointer; }
+    .hero { padding: 56px 0 70px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 54px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #dce6d1; background: #eef3e7; color: var(--forest-2); padding: 8px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 1.1px; text-transform: uppercase; }
+    .eyebrow:before { content: ""; width: 7px; height: 7px; background: #7eae54; border-radius: 50%; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; }
+    h1 { font-size: clamp(42px, 5.4vw, 72px); line-height: 1.04; letter-spacing: -2.5px; margin: 22px 0; color: var(--forest); }
+    h1 em { color: #81a95a; font-style: normal; }
+    .hero-copy { max-width: 490px; color: var(--muted); font-size: 16px; line-height: 1.85; margin-bottom: 27px; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .btn.secondary { background: transparent; color: var(--forest); border: 1px solid #cbd7c5; }
+    .btn.secondary:hover { background: #eaf0e4; }
+    .hero-note { display: flex; align-items: center; gap: 13px; margin-top: 34px; color: var(--muted); font-size: 12px; }
+    .avatar-stack { display: flex; padding-left: 5px; }
+    .avatar-stack span { width: 29px; height: 29px; margin-left: -5px; display: grid; place-items: center; border: 2px solid var(--cream); border-radius: 50%; background: #dce7cc; font-size: 13px; }
+    .hero-art { position: relative; min-height: 500px; }
+    .hero-image { position: absolute; inset: 0 18px 15px 30px; height: calc(100% - 15px); border-radius: 46% 46% 22px 22px; box-shadow: var(--shadow); }
+    .hero-image img { height: 100%; border-radius: inherit; }
+    .image-label { position: absolute; right: 0; bottom: 45px; background: var(--paper); padding: 17px 20px; border-radius: 16px; box-shadow: var(--shadow); max-width: 205px; }
+    .image-label strong { display: block; color: var(--forest); font-family: "Playfair Display", serif; font-size: 17px; margin-bottom: 4px; }
+    .image-label span { font-size: 11px; color: var(--muted); line-height: 1.5; }
+    .round-stamp { position: absolute; left: 0; top: 42px; width: 94px; height: 94px; display: grid; place-items: center; text-align: center; border-radius: 50%; background: var(--gold); color: #3b321d; font-size: 10px; line-height: 1.4; font-weight: 800; letter-spacing: .7px; transform: rotate(-12deg); border: 5px solid rgba(255,255,255,.45); }
+    .stats { background: var(--forest); color: white; padding: 26px 0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .stat { display: flex; justify-content: center; align-items: center; gap: 14px; padding: 5px; border-right: 1px solid rgba(255,255,255,.18); }
+    .stat:last-child { border: 0; }
+    .stat-icon { font-size: 26px; color: #c7e6a2; }
+    .stat strong { display: block; font-family: "Playfair Display", serif; font-size: 21px; }
+    .stat span:last-child { color: #c4d5c7; font-size: 11px; }
+    section { padding: 86px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 32px; }
+    .section-kicker { color: #759a53; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.7px; margin-bottom: 11px; }
+    h2 { font-size: clamp(31px, 4vw, 45px); line-height: 1.12; letter-spacing: -1px; color: var(--forest); margin-bottom: 12px; }
+    .section-desc { max-width: 520px; color: var(--muted); line-height: 1.75; font-size: 14px; margin-bottom: 0; }
+    .search-box { display: flex; align-items: center; gap: 9px; background: white; border: 1px solid var(--line); border-radius: 999px; padding: 11px 16px; min-width: 245px; }
+    .search-box span { color: #82907f; }
+    .search-box input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 13px; }
+    .plant-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .plant-card { background: var(--paper); border: 1px solid #e9ecdf; border-radius: 19px; overflow: hidden; transition: transform .25s, box-shadow .25s; }
+    .plant-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .plant-photo { height: 225px; position: relative; overflow: hidden; }
+    .plant-photo img { height: 100%; transition: transform .5s; }
+    .plant-card:hover .plant-photo img { transform: scale(1.05); }
+    .plant-tag { position: absolute; top: 14px; left: 14px; background: rgba(255,254,249,.94); color: var(--forest); padding: 7px 10px; border-radius: 999px; font-size: 10px; font-weight: 800; }
+    .plant-body { padding: 22px; }
+    .plant-body h3 { color: var(--forest); font-size: 23px; margin-bottom: 4px; }
+    .latin { color: #879184; font-size: 11px; font-style: italic; margin-bottom: 14px; }
+    .plant-body p { color: var(--muted); font-size: 13px; line-height: 1.7; margin-bottom: 18px; }
+    .card-link { color: #638b43; font-size: 12px; font-weight: 800; cursor: pointer; background: none; border: 0; padding: 0; }
+    .card-link:hover { color: var(--forest); }
+    .empty-state { display: none; padding: 30px; text-align: center; color: var(--muted); grid-column: 1/-1; }
+    .feature { background: #eaf0e3; }
+    .feature-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 55px; align-items: center; }
+    .feature-photo { min-height: 430px; border-radius: 20px 110px 20px 20px; overflow: hidden; box-shadow: var(--shadow); }
+    .feature-photo img { height: 430px; }
+    .feature-list { display: grid; gap: 19px; margin-top: 26px; }
+    .feature-item { display: flex; gap: 14px; align-items: flex-start; }
+    .feature-icon { flex: 0 0 42px; height: 42px; display: grid; place-items: center; background: white; border-radius: 13px; font-size: 20px; }
+    .feature-item strong { display: block; color: var(--forest); font-size: 14px; margin: 2px 0 5px; }
+    .feature-item p { color: var(--muted); font-size: 12px; line-height: 1.7; margin: 0; }
+    .notice { margin-top: 22px; padding: 14px 16px; border-left: 3px solid #a2bc7b; background: rgba(255,255,255,.55); color: #596954; font-size: 11px; line-height: 1.7; border-radius: 0 10px 10px 0; }
+    .quote-panel { background: var(--forest); color: white; border-radius: 24px; padding: 46px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 25px; }
+    .quote-panel h2 { color: white; max-width: 650px; margin: 10px 0 12px; }
+    .quote-panel p { color: #cbd8cb; font-size: 13px; line-height: 1.7; max-width: 610px; margin: 0; }
+    .quote-leaf { font-size: 70px; color: #a5ce7c; }
+    footer { background: #102d20; color: white; padding: 45px 0 25px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-bottom: 35px; }
+    footer .brand { color: white; }
+    footer .brand small { color: #afc4b2; }
+    .footer-copy { max-width: 330px; color: #b5c7b7; font-size: 12px; line-height: 1.8; margin-top: 17px; }
+    footer h4 { font-size: 12px; margin: 7px 0 16px; letter-spacing: .5px; }
+    .footer-links { display: grid; gap: 11px; color: #b5c7b7; font-size: 12px; }
+    .footer-links a:hover { color: #d5eab6; }
+    .copyright { border-top: 1px solid rgba(255,255,255,.15); padding-top: 20px; display: flex; justify-content: space-between; gap: 15px; color: #93ad99; font-size: 10px; }
+    .modal-backdrop { display: none; position: fixed; inset: 0; z-index: 50; background: rgba(8,24,15,.65); padding: 20px; align-items: center; justify-content: center; }
+    .modal-backdrop.show { display: flex; }
+    .modal { max-width: 490px; width: 100%; background: var(--paper); border-radius: 20px; padding: 30px; position: relative; box-shadow: 0 25px 80px #07180f55; }
+    .modal h3 { color: var(--forest); font-size: 28px; margin-bottom: 12px; }
+    .modal p { color: var(--muted); font-size: 14px; line-height: 1.8; }
+    .modal-close { position: absolute; right: 17px; top: 14px; border: 0; background: #edf1e7; width: 33px; height: 33px; border-radius: 50%; cursor: pointer; font-size: 20px; color: var(--forest); }
+    @media (max-width: 850px) {
+      .navlinks { gap: 15px; } .navlinks a { font-size: 12px; } .nav-cta { display: none; }
+      .hero-grid { gap: 25px; } .hero-art { min-height: 420px; } .plant-grid { grid-template-columns: repeat(2,1fr); }
+      .feature-grid { gap: 30px; } .section-head { align-items: flex-start; flex-direction: column; }
+      .quote-panel { padding: 35px; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 30px, 480px); }
+      .nav { min-height: 68px; } .menu-toggle { display: block; }
+      .navlinks { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 18px 22px 22px; background: var(--cream); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 18px; }
+      .navlinks.open { display: flex; } .navlinks a { font-size: 14px; }
+      .hero { padding: 38px 0 50px; } .hero-grid { grid-template-columns: 1fr; gap: 22px; }
+      h1 { font-size: 49px; letter-spacing: -1.8px; } .hero-copy { font-size: 14px; }
+      .hero-art { min-height: 370px; } .hero-image { inset: 0 10px 12px 20px; } .round-stamp { width: 78px; height: 78px; font-size: 8px; top: 20px; }
+      .image-label { bottom: 28px; padding: 13px 15px; }
+      .stats-grid { gap: 4px; } .stat { flex-direction: column; text-align: center; gap: 6px; padding: 5px 2px; } .stat strong { font-size: 18px; } .stat span:last-child { font-size: 9px; }
+      section { padding: 62px 0; } .plant-grid { grid-template-columns: 1fr; gap: 16px; } .plant-photo { height: 230px; }
+      .search-box { width: 100%; } .feature-grid { grid-template-columns: 1fr; } .feature-photo, .feature-photo img { height: 310px; min-height: 310px; }
+      .quote-panel { grid-template-columns: 1fr; padding: 28px; } .quote-leaf { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; } .footer-grid > div:first-child { grid-column: 1/-1; }
+      .copyright { flex-direction: column; line-height: 1.6; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">🌿 KENALI KEKAYAAN ALAM • RAWAT TANAMAN • HIDUP LEBIH SEIMBANG</div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#beranda" aria-label="King Adit Obat Sehat - Beranda">
+        <span class="brand-mark">♧</span>
+        <span>KING ADIT<small>OBAT SEHAT</small></span>
+      </a>
+      <nav class="navlinks" id="navlinks" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a><a href="#tanaman">Tanaman Herbal</a><a href="#panduan">Panduan</a><a href="#tentang">Tentang Kami</a>
+      </nav>
+      <a class="nav-cta" href="#tanaman">Jelajahi Herbal ↗</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Kembali dekat dengan alam</span>
+          <h1>Rahasia sehat dari <em>alam.</em></h1>
+          <p class="hero-copy">Selamat datang di King Adit Obat Sehat. Kenali tanaman herbal yang akrab di sekitar kita, pelajari penggunaan tradisionalnya, dan temukan inspirasi untuk merawat kebun herbal sendiri.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#tanaman">🌱 Kenali Tanamannya</a>
+            <a class="btn secondary" href="#panduan">Baca Panduan ↓</a>
+          </div>
+          <div class="hero-note">
+            <div class="avatar-stack"><span>🌿</span><span>🍃</span><span>🌱</span></div>
+            <span>Belajar dari alam, gunakan dengan bijak.</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=2000&q=90" alt="Tanaman hijau segar terkena cahaya matahari" fetchpriority="high">
+          </div>
+          <div class="round-stamp">NATURE<br>INSPIRES<br>WELLNESS ✳</div>
+          <div class="image-label"><strong>Hijaukan harimu</strong><span>Mulai dari satu tanaman, tumbuh jadi kebiasaan baik.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="container stats-grid">
+        <div class="stat"><span class="stat-icon">♧</span><div><strong>Tanaman Lokal</strong><span>Kenali kekayaan sekitar</span></div></div>
+        <div class="stat"><span class="stat-icon">☀</span><div><strong>Rawat dengan Baik</strong><span>Tips tumbuh sehat</span></div></div>
+        <div class="stat"><span class="stat-icon">♡</span><div><strong>Gunakan Bijak</strong><span>Informasi yang bertanggung jawab</span></div></div>
+      </div>
+    </div>
+
+    <section id="tanaman">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Dari kebun ke pengetahuan</div><h2>Kenali tanaman herbal</h2><p class="section-desc">Beberapa tanaman yang sering dikenal dalam tradisi Indonesia. Cari nama tanaman untuk menemukan ringkasan singkatnya.</p></div>
+          <label class="search-box"><span>⌕</span><input type="search" id="plantSearch" placeholder="Cari tanaman..." aria-label="Cari tanaman herbal"></label>
+        </div>
+        <div class="plant-grid" id="plantGrid">
+          <article class="plant-card" data-name="jahe ginger">
+            <div class="plant-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1615485500704-8e990f9900f4?auto=format&fit=crop&w=1200&q=90" alt="Rimpang jahe segar"><span class="plant-tag">RIMPANG</span></div>
+            <div class="plant-body"><h3>Jahe</h3><div class="latin">Zingiber officinale</div><p>Rempah beraroma hangat yang umum digunakan dalam minuman tradisional dan masakan.</p><button class="card-link" data-plant="jahe">Kenali lebih lanjut ↗</button></div>
+          </article>
+          <article class="plant-card" data-name="kunyit turmeric">
+            <div class="plant-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1200&q=90" alt="Kunyit berwarna kuning keemasan"><span class="plant-tag">RIMPANG</span></div>
+            <div class="plant-body"><h3>Kunyit</h3><div class="latin">Curcuma longa</div><p>Rimpang berwarna kuning yang populer sebagai bumbu dan bahan minuman tradisional.</p><button class="card-link" data-plant="kunyit">Kenali lebih lanjut ↗</button></div>
+          </article>
+          <article class="plant-card" data-name="lidah buaya aloe vera">
+            <div class="plant-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=1200&q=90" alt="Lidah buaya dengan daun tebal hijau"><span class="plant-tag">TANAMAN DAUN</span></div>
+            <div class="plant-body"><h3>Lidah Buaya</h3><div class="latin">Aloe vera</div><p>Tanaman sukulen yang mudah dirawat dan banyak digunakan dalam produk perawatan kulit.</p><button class="card-link" data-plant="lidah buaya">Kenali lebih lanjut ↗</button></div>
+          </article>
+          <article class="plant-card" data-name="serai sereh lemongrass">
+            <div class="plant-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1603905179139-d6c4e5c3c0d8?auto=format&fit=crop&w=1200&q=90" alt="Daun serai segar"><span class="plant-tag">RUMPUT AROMATIK</span></div>
+            <div class="plant-body"><h3>Serai</h3><div class="latin">Cymbopogon citratus</div><p>Herba beraroma sitrus yang kerap dipakai untuk masakan dan minuman hangat.</p><button class="card-link" data-plant="serai">Kenali lebih lanjut ↗</button></div>
+          </article>
+          <article class="plant-card" data-name="kemangi basil">
+            <div class="plant-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1618375569909-3c8616cf7733?auto=format&fit=crop&w=1200&q=90" alt="Daun hijau aromatik"><span class="plant-tag">TANAMAN DAUN</span></div>
+            <div class="plant-body"><h3>Kemangi</h3><div class="latin">Ocimum basilicum / Ocimum spp.</div><p>Daun aromatik yang sering disantap sebagai lalapan dan pelengkap hidangan.</p><button class="card-link" data-plant="kemangi">Kenali lebih lanjut ↗</button></div>
+          </article>
+          <article class="plant-card" data-name="mint daun mint">
+            <div class="plant-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?auto=format&fit=crop&w=1200&q=90" alt="Daun mint hijau segar"><span class="plant-tag">TANAMAN DAUN</span></div>
+            <div class="plant-body"><h3>Daun Mint</h3><div class="latin">Mentha spp.</div><p>Daun beraroma segar yang dapat digunakan sebagai pelengkap minuman dan makanan.</p><button class="card-link" data-plant="mint">Kenali lebih lanjut ↗</button></div>
+          </article>
+          <div class="empty-state" id="emptyState">Tanaman tidak ditemukan. Coba kata kunci lain 🌱</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature" id="panduan">
+      <div class="container feature-grid">
+        <div class="feature-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=90" alt="Kebun tanaman hijau yang tumbuh subur"></div>
+        <div>
+          <div class="section-kicker">Mulai dari langkah sederhana</div>
+          <h2>Rawat kebun herbalmu sendiri.</h2>
+          <p class="section-desc">Tak perlu lahan luas. Beberapa tanaman aromatik bisa tumbuh di pot, balkon, atau sudut halaman yang mendapat cahaya cukup.</p>
+          <div class="feature-list">
+            <div class="feature-item"><span class="feature-icon">☀️</span><div><strong>Pilih cahaya yang sesuai</strong><p>Perhatikan kebutuhan sinar matahari setiap tanaman; tidak semuanya cocok di bawah matahari terik.</p></div></div>
+            <div class="feature-item"><span class="feature-icon">💧</span><div><strong>Siram secukupnya</strong><p>Pastikan pot memiliki lubang drainase dan cek kelembapan tanah sebelum menyiram lagi.</p></div></div>
+            <div class="feature-item"><span class="feature-icon">🪴</span><div><strong>Gunakan media tanam yang baik</strong><p>Media yang gembur membantu akar mendapat udara dan mengurangi risiko air menggenang.</p></div></div>
+          </div>
+          <div class="notice"><strong>Catatan kesehatan:</strong> Informasi di situs ini bersifat edukasi umum, bukan diagnosis atau pengganti nasihat tenaga kesehatan. Tanaman herbal dapat memiliki efek samping dan berinteraksi dengan obat. Jangan menghentikan obat resep atau mengobati kondisi serius tanpa konsultasi profesional.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang">
+      <div class="container">
+        <div class="quote-panel">
+          <div><div class="section-kicker" style="color:#b6d792">KING ADIT OBAT SEHAT</div><h2>Belajar tentang alam, dengan rasa ingin tahu dan tanggung jawab.</h2><p>Tempat sederhana untuk mengenal tanaman herbal, inspirasi berkebun, dan kebiasaan hidup yang lebih dekat dengan alam.</p></div>
+          <div class="quote-leaf" aria-hidden="true">❧</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><a class="brand" href="#beranda"><span class="brand-mark">♧</span><span>KING ADIT<small>OBAT SEHAT</small></span></a><p class="footer-copy">Mengenal tanaman herbal dan merawat alam dimulai dari hal kecil. Terima kasih telah berkunjung!</p></div>
+        <div><h4>JELAJAHI</h4><div class="footer-links"><a href="#beranda">Beranda</a><a href="#tanaman">Tanaman Herbal</a><a href="#panduan">Panduan Perawatan</a></div></div>
+        <div><h4>INGAT SELALU</h4><div class="footer-links"><span>Gunakan informasi secara bijak</span><span>Utamakan keamanan kesehatan</span><a href="#tentang">Tentang King Adit</a></div></div>
+      </div>
+      <div class="copyright"><span>© <span id="year"></span> King Adit Obat Sehat. Dibuat dengan 🌿</span><span>Foto dari Unsplash · Memerlukan koneksi internet untuk memuat gambar dan font.</span></div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="plantModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal"><button class="modal-close" id="modalClose" aria-label="Tutup">×</button><div class="section-kicker">Kenali tanamannya</div><h3 id="modalTitle">Tanaman Herbal</h3><p id="modalText"></p><div class="notice">Informasi tradisional bukan bukti bahwa tanaman dapat menyembuhkan penyakit. Pastikan identifikasi tanaman benar dan konsultasikan penggunaan untuk tujuan kesehatan kepada tenaga kesehatan.</div></div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navlinks = document.getElementById('navlinks');
+    menuToggle.addEventListener('click', () => {
+      const opened = navlinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(opened));
+      menuToggle.textContent = opened ? '×' : '☰';
+    });
+    navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navlinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    }));
+
+    const search = document.getElementById('plantSearch');
+    const cards = [...document.querySelectorAll('.plant-card')];
+    const emptyState = document.getElementById('emptyState');
+    search.addEventListener('input', () => {
+      const term = search.value.trim().toLocaleLowerCase('id');
+      let shown = 0;
+      cards.forEach(card => {
+        const match = (card.dataset.name + ' ' + card.innerText).toLocaleLowerCase('id').includes(term);
+        card.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      emptyState.style.display = shown ? 'none' : 'block';
+    });
+
+    const plantInfo = {
+      'jahe': ['Jahe', 'Jahe merupakan rempah yang sering digunakan dalam masakan dan minuman tradisional. Tanaman ini menyukai media tanam gembur, lembap tetapi tidak tergenang, serta cahaya yang cukup. Konsumsi sebagai pangan berbeda dari penggunaan dosis tinggi sebagai suplemen.'],
+      'kunyit': ['Kunyit', 'Kunyit dikenal sebagai bumbu dapur dan bahan jamu tradisional. Tanaman ini tumbuh dari rimpang dan umumnya cocok di tanah subur dengan drainase baik. Penggunaan dalam jumlah obat dapat berisiko bagi sebagian orang, terutama yang memiliki kondisi kesehatan tertentu atau menggunakan obat rutin.'],
+      'lidah buaya': ['Lidah Buaya', 'Lidah buaya merupakan tanaman sukulen yang membutuhkan media berdrainase baik dan tidak perlu terlalu sering disiram. Produk gel untuk kulit berbeda dengan konsumsi bagian tanaman; getah kuningnya dapat menyebabkan efek samping bila tertelan.'],
+      'serai': ['Serai', 'Serai memiliki aroma sitrus dan umum digunakan untuk masakan atau minuman. Tanaman ini menyukai sinar matahari dan tanah yang tidak tergenang. Jangan menganggap minyak atsiri pekat sama dengan penggunaan serai sebagai bahan makanan.'],
+      'kemangi': ['Kemangi', 'Kemangi merupakan daun aromatik yang sering digunakan sebagai lalapan atau pelengkap makanan. Berikan cahaya yang cukup, siram saat tanah mulai mengering, dan panen daun secara berkala. Cuci bersih sebelum dikonsumsi.'],
+      'mint': ['Daun Mint', 'Mint memiliki aroma segar dan cocok ditanam dalam pot agar pertumbuhannya mudah dikendalikan. Tanaman ini umumnya menyukai tanah yang lembap dengan drainase baik. Daun mint dapat digunakan sebagai bahan makanan atau minuman, tetapi bukan pengganti perawatan medis.']
+    };
+    const modal = document.getElementById('plantModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    function closeModal() { modal.classList.remove('show'); }
+    document.querySelectorAll('[data-plant]').forEach(button => button.addEventListener('click', () => {
+      const info = plantInfo[button.dataset.plant];
+      if (!info) return;
+      modalTitle.textContent = info[0];
+      modalText.textContent = info[1];
+      modal.classList.add('show');
+      document.getElementById('modalClose').focus();
+    }));
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeModal(); });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
